@@ -3,19 +3,40 @@ const db = require("../infra/sql_client")
 module.exports = {
 
     async get(){
-        const result =  await db.querySql("select * from categoria")
-        console.log(result)
+        try{
+            const result =  await db.querySql("select * from categoria")
+            console.log(result)
+            
+        }
+        catch (error){
+            console.log("ERROR: getCategory", error)
+        }
     },
 
     async post(name){
-        await db.querySql(`insert into categoria values (default, '${name}')`)
+        try{
+            await db.querySql(`insert into categoria values (default, '${name}')`)
+        }
+        catch (error){
+            console.log("ERROR: postCategory", error)
+        }
     },
 
     async put(name, id){
-        await db.querySql(`UPDATE categoria set nome = '${name}' WHERE (idCategoria = '${id}')`)
+        try{
+            await db.querySql(`UPDATE categoria set nome = '${name}' WHERE (idCategoria = '${id}')`)
+        }
+        catch (error){
+            console.log("ERROR: putCategory", error)
+        }
     },
 
     async delete(id){
-        await db.querySql(`delete from categoria where idCategoria = ${id}`)
+        try{
+            await db.querySql(`delete from categoria where idCategoria = ${id}`)
+        }
+        catch (error){
+            console.log("ERROR: deleteCategory", error)
+        }
     }
 }
