@@ -1,4 +1,4 @@
-const api = require("../config")
+const api = require("../routes/route")
 const categoryController = require("../../controller/category_controller")
 
 
@@ -18,3 +18,5 @@ api.get("/", (req, res) => {
 module.exports = api
 
 
+
+    

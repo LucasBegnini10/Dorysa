@@ -6,7 +6,7 @@ async function startApi(){
     await db.connectSql()
 
     api.listen(3001, () =>{
-        console.log("API ligada")
+        console.log("API ligada: http://localhost:3001/")
     })
 }
 

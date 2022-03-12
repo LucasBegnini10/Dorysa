@@ -2,8 +2,10 @@ const categoryRepository = require("../repository/category_repository")
 
 module.exports = {
 
-    get(req, res){
+    async get(req, res){
         categoryRepository.get()
+        const result = await categoryRepository.get()
+        res.send(result)
     },
 
     post(req, res){
@@ -22,3 +24,4 @@ module.exports = {
         categoryRepository.delete(id)
     }
 }
+
