@@ -10,10 +10,6 @@ api.post("/category", categoryController.post)
 
 api.get("/category", categoryController.get)
 
-api.get("/", (req, res) => {
-    res.send('HI. This is my API.')
-})
-
 
 module.exports = api
 
