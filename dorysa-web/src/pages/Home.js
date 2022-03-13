@@ -1,7 +1,7 @@
 import Sidebar from "../components/sidebar/Sidebar";
 import Logo from "../components/logo/Logo";
 import Category from "../components/categorys/Category";
-import Products from "../components/products/Products";
+import ProductsSection from "../components/products/ProductsSection";
 
 export function Home(){
 
@@ -10,7 +10,7 @@ export function Home(){
             <Sidebar  />
             <Logo />
             <Category />
-            <Products />
+            <ProductsSection />
         </>
     )
 }

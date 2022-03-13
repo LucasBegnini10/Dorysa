@@ -1,5 +1,5 @@
 const db = require("./infra/sql_client")
-const api = require("./server/routes/category_routes")
+const api = require("./server/routes/product_routes")
 
 
 async function startApi(){
