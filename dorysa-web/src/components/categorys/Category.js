@@ -23,7 +23,7 @@ export default function Category(props){
                     {typeof listCategory !== "undefined" &&
                     listCategory.map((value) => {
                         return <CardsCategory 
-                        key={value.idCategory}
+                        key={value.idCategoria}
                         name={value.nome}/>
                     })} 
 

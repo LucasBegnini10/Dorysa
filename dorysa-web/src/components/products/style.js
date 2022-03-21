@@ -22,7 +22,25 @@ const SubSection = styled.div`
     align-items: center;
 `;
 
+const CardProduct = styled.div `
+width: 200px;
+height: 300px;
+border-radius: 30px;
+border: solid 1px #141325;
+text-align: center;
+
+`
+
+const CardContent = styled.div `
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+`
+
 export {
     Section,
-    SubSection
+    SubSection,
+    CardProduct,
+    CardContent
 }

@@ -11,5 +11,17 @@ module.exports = {
         catch(error){
             console.log(error)
         }
+    },
+    async getForCategory(id){
+        try{
+            const result = await db.querySql(`select * from produto where idCategoria = ${id}`)
+            
+            const ResultInString = (JSON.stringify(result))
+            const ResultInJson = JSON.parse(ResultInString)
+            return ResultInJson
+        }
+        catch(error){
+            console.log(error)
+        }
     }
 }
